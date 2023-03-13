@@ -12,7 +12,7 @@ with MongoDB to manage the data of books.
 * Ensure that you have node.js, npm, and nodemon installed.
 * Use npm install to install dependencies.
 * Setup a MongoDB Atlas cluster.
-* Add a .env file into your root folder with an environment variable pointing to your MongoDB cluster.
+* Add a .env file into your root folder with an environment variable called DB_URL pointing to your MongoDB cluster.
 * Run node seed.js to populate your database with test data.
 * Run the server on nodemon and make calls to the server through localhost or an online server host.
 
