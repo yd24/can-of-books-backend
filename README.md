@@ -37,12 +37,6 @@ Start Time: 12:45 PM\
 End Time: 1:45 PM\
 Actual: 2:30PM
 
-Feature: Rendering Front End\
-Estimated time to complete: 2 hour\
-Start Time: 2:30 PM\
-End Time: 4:30 PM\
-Actual: 4 PM
-
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
