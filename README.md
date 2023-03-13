@@ -2,24 +2,46 @@
 
 **Author**: Jonathan Tsai, Daniel Yoon
 
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.2.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+People want to keep track of their books and which ones are checked-out of the system, so we create a server that interfaces
+with MongoDB to manage the data of books.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+* Ensure that you have node.js, npm, and nodemon installed.
+* Use npm install to install dependencies.
+* Setup a MongoDB Atlas cluster.
+* Add a .env file into your root folder with an environment variable pointing to your MongoDB cluster.
+* Run node seed.js to populate your database with test data.
+* Run the server on nodemon and make calls to the server through localhost or an online server host.
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+This server stores data in MongoDB Atlas, using Mongoose to create schemas and data models for the document entries. We use Express.js to handle API calls to our server.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+03-13-2023 2:00pm Setup schema and model for MongoDB database entries. Populate test data.
+03-13-2023 3:00pm Create route for /books that handles GET request for book data.
 
 ## Estimates
 <!-- See below -->
+Feature: Repo setup\
+Estimated time to complete: 30 min\
+Start Time: 12:30 PM\
+End Time: 1 PM\
+Actual: 12:45 PM
+
+Feature: Seeding and Querying MongoDB\
+Estimated time to complete: 1 hour\
+Start Time: 12:45 PM\
+End Time: 1:45 PM\
+Actual: 2:30PM
+
+Feature: Rendering Front End\
+Estimated time to complete: 2 hour\
+Start Time: 2:30 PM\
+End Time: 4:30 PM\
+Actual: 4 PM
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
