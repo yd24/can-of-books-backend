@@ -25,6 +25,17 @@ app.get('/test', (request, response) => {
 
 })
 
+app.get('/books', getBooks)
+
+async function getBooks(req, res, next) {
+  try {
+    let result = await Book.find();
+    res.status(200).send(result);
+  } catch (err) {
+    next(err);
+  }
+}
+
 app.get('*', (request, response) => {
   response.send('No resource found.');
 })
