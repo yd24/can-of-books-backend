@@ -28,6 +28,7 @@ app.get('/test', (request, response) => {
 
 app.get('/books', getBooks);
 app.post('/books', addBook);
+app.delete('/books/:id', deleteBook);
 
 async function addBook(req, res, next) {
   try {
@@ -37,6 +38,17 @@ async function addBook(req, res, next) {
   } catch (err) {
     console.error(err);
     res.status(500).send('Could not create Book');
+  }
+}
+
+async function deleteBook(req, res, next) {
+  try {
+    let id = req.params.id;
+    await Book.findByIdAndDelete(id);
+    res.status(200).send('Book was deleted');
+  } catch (err) {
+    console.error(err);
+    res.status(404).send('Book could not be found');
   }
 }
 
