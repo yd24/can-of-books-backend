@@ -16,6 +16,7 @@ db.once('open', () => {
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
@@ -25,14 +26,27 @@ app.get('/test', (request, response) => {
 
 })
 
-app.get('/books', getBooks)
+app.get('/books', getBooks);
+app.post('/books', addBook);
+
+async function addBook(req, res, next) {
+  try {
+    console.log(req);
+    let newBook = await Book.create(req.body);
+    res.status(200).send(newBook);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Could not create Book');
+  }
+}
 
 async function getBooks(req, res, next) {
   try {
     let result = await Book.find();
     res.status(200).send(result);
   } catch (err) {
-    next(err);
+    console.error(err);
+    res.status(404).send('Could not find requested book');
   }
 }
 
