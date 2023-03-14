@@ -32,7 +32,6 @@ app.delete('/books/:id', deleteBook);
 
 async function addBook(req, res, next) {
   try {
-    console.log(req);
     let newBook = await Book.create(req.body);
     res.status(200).send(newBook);
   } catch (err) {
