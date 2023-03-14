@@ -2,7 +2,7 @@
 
 **Author**: Jonathan Tsai, Daniel Yoon
 
-**Version**: 1.2.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.4.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 People want to keep track of their books and which ones are checked-out of the system, so we create a server that interfaces
@@ -22,6 +22,8 @@ This server stores data in MongoDB Atlas, using Mongoose to create schemas and d
 ## Change Log
 03-13-2023 2:00pm Setup schema and model for MongoDB database entries. Populate test data.
 03-13-2023 3:00pm Create route for /books that handles GET request for book data.
+03-14-2023 2:00pm Create route for /books that handles POST request for adding a new book.
+03-14-2023 3:00pm Create route for /books that handles DELETE request for deleting a book.
 
 ## Estimates
 <!-- See below -->
@@ -42,6 +44,18 @@ Estimated time to complete: 2 hour\
 Start Time: 2:30 PM\
 End Time: 4:30 PM\
 Actual: 4 PM
+
+Feature: Add POST route for book\
+Estimate of time needed to complete: 1 hour\
+Start time:  1:00pm\
+Finish time: 2:00pm\
+Actual time needed to complete: 1 hour
+
+Feature: Add DELETE route for book\
+Estimate of time needed to complete: 30 min\
+Start time:  2:00pm\
+Finish time: 3:00pm\
+Actual time needed to complete: 1 hour
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
