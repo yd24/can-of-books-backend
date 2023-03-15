@@ -49,8 +49,7 @@ async function putBook(req, res, next) {
     console.log(updatedBook);
     res.status(200).send(updatedBook);
   } catch (err) {
-    /*console.error(err);*/
-    next(err);
+    console.error(err);
     res.status(500).send('Could not update Book');
   }
 }
