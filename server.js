@@ -46,9 +46,10 @@ async function putBook(req, res, next) {
     let id = req.params.id;
     let update = req.body;
     let updatedBook = await Book.findByIdAndUpdate(id, update, { new: true, overwrite: true });
-    res.status(200).send(updatedBook);
+    res.status(204).send(updatedBook);
   } catch (err) {
-    console.error(err);
+    /*console.error(err);*/
+    next(err);
     res.status(500).send('Could not update Book');
   }
 }
